@@ -1,0 +1,421 @@
+:root {
+        --blue: rgb(90, 127, 186);
+        --lightblue: aqua;
+        --green: olive;
+}
+
+body {
+    margin-left: 20px;
+    padding: 0;
+}
+
+#formBox {
+    margin: 0 auto;
+    background-color: aqua;
+    width: 50vw;
+    font-size: 20px;
+}
+.input-group {
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 4px;
+}
+.input-group input {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border:whitesmoke;
+    width: 90%;
+    height: 4vh;
+    margin: 0 auto 5px auto;
+    padding: 5px;
+    font-size: 15px;
+}
+.input-group input:focus {
+    outline: 0;
+}
+#register {
+    width: 90%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-color: whitesmoke;
+    margin: 0 auto;
+}
+
+
+/* BORDERIMAGES */
+.BGborder {
+    background-color: aqua;
+    padding: 20px;
+    border: rgba(0, 255, 255, 0.775) solid 10px;
+    width: 40vw;
+    height: 40vh;
+}
+
+.imgborder {
+    margin-left: 20px;
+    border: 40px solid transparent;
+    /* padding: 10px; */
+    border-image: url(images.png) 50 stretch;
+    /* opacity: 0.5; */
+    background: no-repeat fixed;
+    height: 400px;
+    width: 600px;
+}
+
+/* BGimages */
+#BGimages {
+    background-image: url(images/wave-neon.jpg) , url(images/Neon-border.jpg);
+    background-repeat: no-repeat , no-repeat;
+    /* image wave stuck in left can't able to change position 
+    background-position: left bottom, center/cover; (remove cover)*/
+    background-position: center, center;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-size: 550px 200px, cover;
+
+    color: whitesmoke;
+    height: 400px;
+    width: 700px;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: justify;
+}
+#BGimages pre {
+    position: relative;
+    top: 20%;
+}
+
+/* rgbacolor */
+.rgbacolor {
+    width: 200px;
+    height: 100px;
+
+    background-color: rgba(254, 255, 0, .5);
+}
+/* hslcolor */
+.hslcolor {
+    width: 200px;
+    height: 100px;
+    /* background-color: hsla(hue, saturation, lightness, alpha); */
+    background-color: hsla(120, 100%, 50%, 1);
+}
+
+/* linerar-gradient */
+.colorflex {
+                /* display:flex */
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 20px;   
+    justify-content: center;
+    align-items: center;  */
+                /* display:grid */
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 20px;
+}
+/* try to add media queries */
+.linear-gradient {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    background-image: linear-gradient(red , green, blue);
+}
+.linear-gradient1 {
+    width: 300px;
+    height: 200px;
+    text-align: right;
+    background-image: linear-gradient(to right, red , yellow);
+}.linear-gradient2 {
+    width: 300px;
+    height: 200px;
+    background-image: linear-gradient(to left, green, yellow);
+}
+
+/* Radial-gradient */
+.Radial-gradient {
+    width: 300px;
+    height: 200px;
+    background-image: radial-gradient(red, green);
+}
+.Radial-gradient1 {
+    width: 300px;
+    height: 200px;
+    background-image: radial-gradient(circle, green, yellow);
+}
+.Radial-gradient2 {
+    width: 300px;
+    height: 200px;
+    background-image: repeating-radial-gradient(circle, yellow 20%, yellow 30%, tomato 50%);
+}
+
+/* Conic-gradient */
+.conic-gradient {
+    width: 300px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: conic-gradient(red , green, yellow, blue);
+}
+.conic-gradient1 {
+    width: 300px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: conic-gradient(from 90deg, red , green, yellow, blue);
+}
+.conic-gradient2 {
+    width: 300px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: conic-gradient(from 180deg, red , green, yellow, blue);
+}
+.conic-gradient3 {
+    width: 300px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: conic-gradient(red 90deg, red 180deg, green 180deg, green 240deg, yellow 240deg, yellow 320deg, blue 210deg ,blue 90deg);
+}
+
+
+/* SHADOW */
+.textShadow {
+    font-size: 40px;
+    text-shadow: 2px 2px 2px orange;
+}
+.boxShadow {
+    background-color: hsla(120,40%,50%,1);
+    box-shadow: 0 2px 6px black, 0 4px 8px black;
+
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+}
+
+
+/* TOOLTIP */   
+.tooltip {
+    position: relative;
+
+}
+.tooltipTxt {
+    position: absolute;
+    visibility: hidden;
+    
+    background-color: rgb(32, 30, 30);
+    color: whitesmoke;
+    padding: 5px 10px;
+    border-color: black;
+    border-radius: 5px;
+    letter-spacing: 2px;
+
+    top: -.3em;
+    left: 8em;
+    z-index: 1;
+
+}
+.tooltip .tooltipTxt::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-color: rgb(40, 37, 37) transparent transparent transparent;
+    border-style: solid;
+    right: 100%;
+    rotate: 90deg;
+    top: 9.545px;
+
+}
+.tooltip:hover .tooltipTxt {
+    visibility: visible;
+}
+
+
+/* ANIMATION */
+.animation {
+    animation-name: sample;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    /* background-image: radial-gradient(red, blue, green); */
+    background-color: aqua;
+    position: relative;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+}
+@keyframes sample {
+    30% {rotate: 390deg;}
+    0% {background-color: green; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: black; left: 0px; top: 200px;}
+    100% {background-color: aquamarine; left: 0px; top: 0px;} 
+}
+
+
+/* OVERLAY HOVER */
+#containerOverlay {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    opacity: 0;
+    background-color: rgb(152, 206, 98);
+    width: 0px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: ease 2s;
+}
+.overlayText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#containerOverlay:hover .overlay {
+    opacity: 1;
+    width: 200px;
+    right: 0px;
+}
+
+
+/* mask */
+#mask {
+    -webkit-mask-image: url(images/pngwing.com.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url(images/pngwing.com.png);
+    mask-repeat: no-repeat;
+}
+.maskimage {
+    min-width: 90%;
+    object-fit: contain;
+}
+
+/* BUTTON STYLING */
+#button-styling {
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#button-styling .button {
+/* background + border */
+    border: none;
+    border-radius: 20px;
+    /* sizing */
+    font-size: 20px;
+    padding: 20px;
+    /* cursor */
+    cursor:pointer;
+    /* transition timing */
+}
+.button1 {
+    color: rgb(68, 175, 44);
+}
+.button1:hover {
+    background-color: rgb(68, 175, 44);
+    color: whitesmoke;
+}
+.button2:hover {
+    background-color: rgb(255, 0, 85);
+}
+.button3 {
+    position: relative;
+    background-color: rgb(217, 68, 68);
+    width: 250px;
+    display: inline;
+}
+.button3:hover {
+    background-color: coral;
+    color: whitesmoke;
+}
+/* arrows */
+.button3 span::after {
+    position: absolute;
+    color: white;
+    content: '\003E \003E';
+    transition-duration: 1s;
+    opacity: 0;
+    top: 20px;
+    right: 100px;
+    z-index: 1;
+}
+.button3:hover span::after {
+    opacity: 1;
+    right: 70px;
+}
+
+.button4 {
+    background-color: olive;
+    color: whitesmoke;
+    box-shadow: 0px 3px 5px 2px orange;
+    transition-duration: 0s;
+}
+.button4:active {
+    box-shadow: 0px 3px 5px 2px pink;
+    background-color: rgb(75, 75, 13);
+    transform: translateY(2px);
+
+}
+
+
+/* resize-overflow */
+.resize-overflow {
+    resize: horizontal;
+    overflow: scroll;
+}
+
+
+/* Var() */
+.varbutton {
+    background-color: var(--green);
+}
+
+
+/* mediaqueries */
+.mediaqueries {
+    color:var(--blue)
+}
+/* TIP : max = min . min = max. AND for multile property ( / ) or property either this or that */
+@media (max-width:700px) {
+    body { background-color: burlywood; }
+}
+/* @media (min-width:700px) {
+    body { background-color: var(--green); }
+} */
+
+
+/* BoxSizing */
+.WithoutBoxSizing {
+    background-color: var(--green);
+    height: 100px;
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+
+    text-align: center;
+}   
+.boxSizing {
+    background-color: var(--green);
+    box-sizing: border-box;
+
+    height: 100px;
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;    
+}
+
+
+
+
+
+
+
+

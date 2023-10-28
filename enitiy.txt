@@ -1,0 +1,10 @@
+GreaterThan and SmallerThan
+&lt;
+&gt;
+&lt;/pa&gt;
+
+Warning - &#9888;
+Warning - &#x26A0;
+
+bio hazard - &#9763;
+bio hazard - &#x2623;

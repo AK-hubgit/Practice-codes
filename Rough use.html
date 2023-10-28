@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="pexels-larissa-farber-13423143.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="rough.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="jquery-3.7.1.slim.js"></script> -->
+</head>
+<body>
+    
+    
+    <h1>Jquery shorthands</h1>
+    <h4 id="clicks">click to hide()</h4>
+    <button id="click">hide</button>
+    <button id="show">show</button>
+    <pre>
+        &lt;h4 id="clicks"&gt;click to hide&lt;/h4&gt;
+        &lt;button id="click"&gt;hide&lt;/button&gt;
+        &lt;button id="show"&gt;show&lt;/button&gt;
+
+        $(document).ready(function(){
+            $("#click").click(function(){
+                $("#clicks").hide()
+            });
+            $("#show").click(function(){
+                $("#clicks").show();
+            });
+          })
+    </pre>
+    <!-- <button onclick="clickF()">click me</button> -->
+    
+    <h4 id="slidetoggle">slidetoggle() Up/Down</h4>
+    <input id="slideToggle" type="button" value="click">
+    <pre>
+        &lt;h4 id="slidetoggle"&gt;slidetoggle() Up/Down&lt;/h4&gt;
+        &lt;input id="slideToggle" type="button" value="h2"&gt;
+
+        $(document).ready(function(){
+            $("#slideToggle").click(function(){
+                $("#slidetoggle").slideToggle()
+            })
+          })
+    </pre>
+
+
+    <!-- FAVICON -->
+    <H1>FAVICON</H1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8hH9lV4hbnY?si=fSneDDsFVQIGKzEX" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <br><br><br><br><br><br><br><br>
+
+    <div id="formBox">
+        <div class="input-group">
+            <label for="userName">Username</label>
+            <input type="text" id="userName" name="userName"> 
+            <div class="errorMsg"></div>
+        </div>
+        <div class="input-group">
+            <label for="eMail">E-mail</label>
+            <input type="text" id="eMail" name="eMail"> 
+            <div class="errorMsg"></div>
+        </div><div class="input-group">
+            <label for="passWord">Password</label>
+            <input type="password" id="passWord" name="passWord"> 
+            <div class="errorMsg"></div>
+        </div><div class="input-group">
+            <label for="cPassword">Confirm Password</label>
+            <input type="password" id="cPassword" name="cPassword"> 
+            <div class="errorMsg"></div>
+            <button id="register" onclick="submits()">Register</button>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="BGborder">BGborder</div>
+    <div class="imgborder">imgborders</div>
+
+    <br><br><br><br><br>
+
+    <div id="BGimages">
+        <pre>
+            background-image: url(images/wave-neon.jpg) , url(images/Neon-border.jpg);
+            background-repeat: no-repeat , no-repeat;
+
+            <p style="color:rgb(217, 255, 0);">/* image wave stuck in left can't able to change position 
+                background-position: left bottom, center/cover; (remove cover)*/</p>
+
+            background-position: center, center;
+            background-origin: border-box;
+            background-clip: border-box;
+            background-size: 550px 200px, cover;
+        
+            height: 400px;
+            width: 700px;
+            padding: 10px;
+            margin-left: 20px;
+            text-align: center;
+        </pre>
+    </div>
+        <br><br><br><br><br>
+
+    <div class="rgbacolor">
+    </div>
+        <br><br><br><br><br>
+
+    <div class="hslcolor"></div>
+        <br><br><br><br><br>
+
+    <div class="colorflex">
+        <h3>LINEAR GRADIENT</h3>
+        <div class="linear-gradient">without direction/default is top to bottom
+            <br>
+            linear-gradient(red , green, blue)
+        </div>
+        <div class="linear-gradient1">(to right, red , yellow)</div>
+        <div class="linear-gradient2">(to left, green, yellow)</div>
+        
+        <h3>RADIAL GRADIENT</h3>
+        <div class="Radial-gradient">background-image: radial-gradient(red, green)</div>
+        <div class="Radial-gradient1">circle, green, yellow</div>
+        <div class="Radial-gradient2">repeating-radial-gradient(circle, yellow 20%, yellow 30%, tomato 50%);</div>
+
+        <h3>CONIC GRADIENT</h3>
+        <div class="conic-gradient">conic-gradient(red , green, yellow, blue)</div>
+        <div class="conic-gradient1">(from 90deg, red , green, yellow, blue)</div>
+        <div class="conic-gradient2">(from 180deg, red , green, yellow, blue);</div>
+        <div class="conic-gradient3">conic-gradient(red 90deg, red 180deg, green 180deg, green 240deg, yellow 240deg, yellow 320deg, blue 210deg ,blue 90deg)</div>
+    </div>
+        <br><br><br><br>
+
+    
+    <div class="boxText-shadow">
+        <div class="textShadow">
+             TEXT-SHADOW = Jan,1,2023
+        </div>
+        <br>
+        <div class="boxShadow">
+            BOX-SHADOW = Jan,1,2023
+        </div>
+    </div>
+
+    <div class="wrap"></div>
+        <br><br><br><br>
+
+    <div class="tooltip">hover me to view
+        <span class="tooltipTxt">Tool-tip</span>
+    </div>
+        <br><br><br><br>
+    
+
+    <div class="animation"></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="containerOverlay">
+        <img src="images/waveNeonsO.jpg" alt="overlayWabveNeon" height="200px" width="200px">
+        <div class="overlay">
+            <div class="overlayText">hello world</div>
+        </div>
+    </div>
+        <br><br><br><br><br>
+
+    <div id="mask">
+        <img class="maskimage" src="images/beach-maria.jpg" alt="mask-layer" height="50%" width="50%">
+    </div>
+        <br><br><br><br><br>
+    
+    <div id="button-styling">
+        <button class="button">click me</button>
+      
+        <button class="button button1"><span>Hover-color-changes</span></button>
+        <button class="button button2"><span>BG-color-change</span></button>
+        <button class="button button3"><span>hover</span></button>
+        <button class="button button4"><span>clicking transition</span></button>
+    </div>
+        <br><br><br><br><br>
+
+    <div class="resize-overflow">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo neque iusto accusamus quidem pariatur nobis earum! Repudiandae laboriosam eligendi tempora? Quisquam quidem consequuntur nulla libero ea odit ratione asperiores. Quos?
+        Eveniet, quasi. Tenetur porro consequuntur praesentium laboriosam quasi ex, quo ducimus, soluta laborum similique facere dicta explicabo quod. Reiciendis excepturi maxime qui culpa, perferendis et ducimus fuga minus eos odit.
+        Ipsa blanditiis officia quia saepe? Voluptatum repellendus iure vel, atque aliquam voluptates quas dicta id! Quo quasi laboriosam fugiat, in dolorum aut rem quia suscipit esse ipsa hic eius iusto!
+        Repudiandae neque at dicta esse harum numquam, molestiae consequuntur itaque a iste. Aperiam hic consequuntur laudantium necessitatibus aliquid corporis magnam veniam tenetur alias! Ratione ab, nemo iusto odit asperiores itaque.
+        Molestias laboriosam tempora porro neque, aliquid inventore rerum eligendi nesciunt laborum accusamus eveniet fuga ullam! Dignissimos error repellat id doloremque consequatur, magni ab enim deleniti soluta aliquid dolores a odio.</p>
+    </div>
+        <br><br><br><br><br>
+
+    
+    <div class="varDeclaration">
+        <button class="varbutton" onclick="varBCchange()">var(--green)</button>
+        <p>click me to change the BG of the button to pink color</p>
+
+    </div>
+        <br><br><br><br><br>
+
+
+    <div class="mediaqueries">
+        <p>media queries</p>
+    </div>
+        <br><br><br><br>
+
+    
+    <div class="gridContainer">
+        <div class="grid-Item grid-Item-1"></div>
+        <div class="grid-Item grid-Item-2"></div>
+        <div class="grid-Item grid-Item-3"></div>
+    </div>
+        <br><br><br><br>
+
+
+    <div class="WithoutBoxSizing">
+        <p>Without-boxsizing</p>
+    </div>
+    <br>
+    <div class="boxSizing">
+        <p>With-boxsizing</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br>    
+    <br><br><br><br><br><br><br><br><br><br>
+    <script src="RU.js"></script>
+</body>
+</html>
